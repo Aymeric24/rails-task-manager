@@ -1,0 +1,8 @@
+<h1>Hello, this is the Task Page</h1>
+<ul>
+  <% @task.each do |task| %>
+    <li><%= task.completed ? "[X] -" : "[O] -" %><%= link_to task.title, task_path(task) %></li>
+  <% end %>
+</ul>
+<%= link_to "Go Back Home", root_path %>
+<%= link_to "Go to New Task", new_path %>
